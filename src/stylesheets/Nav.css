@@ -1,0 +1,29 @@
+:root{
+  --colorBackNav: #151414;
+  --font: 'Poppins', sans-serif;
+}
+.contenedor-nav{
+  background-color: var(--colorBackNav);
+  color: white;
+  padding: 10px;
+}
+.contenedor-interno-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenedor-info-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+.contenedor-info-nav h2{
+  font-size: 2rem;
+  font-family: var(--font);
+  font-weight: 400;
+}
+.contenedor-info-nav img{
+  width: 90px;
+  height: 90px;
+}
