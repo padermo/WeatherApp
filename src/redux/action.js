@@ -22,9 +22,10 @@ export function removeCity(payload) {
 }
 
 // esta funcion obtiene los detalles
-export function getDetail(payload) {
-  return {
-    type: GET_DETAIL,
-    payload
+export function getDetail(name) {
+  return function (dispatch) {
+    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`)
+      .then(response => response.json())
+      .then(data => dispatch({ type: GET_DETAIL, payload: data }))
   }
 }

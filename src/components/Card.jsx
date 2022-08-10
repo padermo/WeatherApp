@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { removeCity } from "../redux/action";
 import "../stylesheets/Card.css";
+import {Link} from 'react-router-dom'
 
 function Card({ name, min, max, id }) {
   const dispatch = useDispatch();
@@ -32,7 +33,9 @@ function Card({ name, min, max, id }) {
         <button className="btn-card btn-remove-card" onClick={onClick}>
           Close
         </button>
-        <button className="btn-card btn-detail-card" >Detail</button>
+        <Link to={`/detail/${name}`}>
+          <button className="btn-card btn-detail-card" >Detail</button>
+        </Link>
       </div>
     </div>
   );
