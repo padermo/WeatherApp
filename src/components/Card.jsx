@@ -4,13 +4,13 @@ import { removeCity } from "../redux/action";
 import "../stylesheets/Card.css";
 import {Link} from 'react-router-dom'
 
-function Card({ name, min, max, id }) {
+function Card({ name, min, max, id, lon, lat }) {
   const dispatch = useDispatch();
 
   function onClick() {
     dispatch(removeCity(id))
   }
-
+  console.log(`ciudad: ${name} long: ${lon} lat: ${lat}`);
   return (
     <div className="contenedor-card">
       <div className="contenedor-cabecera-card">
@@ -33,7 +33,7 @@ function Card({ name, min, max, id }) {
         <button className="btn-card btn-remove-card" onClick={onClick}>
           Close
         </button>
-        <Link to={`/detail/${name}`}>
+        <Link to={`/detail/${lat}/${lon}`}>
           <button className="btn-card btn-detail-card" >Detail</button>
         </Link>
       </div>

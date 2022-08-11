@@ -1,0 +1,11 @@
+:root{
+  --font: 'Montserrat', sans-serif;
+}
+.contenedor-detail h1, h3{
+  font-family: var(--font);
+  font-weight: 400;
+}
+.contenedor-detail h1{
+  display: grid;
+  justify-items: center;
+}

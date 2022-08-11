@@ -3,7 +3,8 @@ import Nav from './Nav'
 import Cards from './Cards'
 import '../stylesheets/App.css'
 import {Route} from 'react-router-dom'
-import Detail from './Detail'
+//import Detail from './Detail'
+import ViewDetail from './ViewDetail'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <div className='contenedor-app'>
       <Nav />
       <Route exact path="/" render={()=> <Cards />} />
-      <Route path="/detail/:name" render={({match}) => <Detail match={match} />} />
+      <Route path="/detail/:lat/:lon" render={({match}) => <ViewDetail match={match} />} />
     </div>
   )
 }

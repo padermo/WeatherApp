@@ -11,10 +11,11 @@ function Cards() {
       {
         state.map(ciudad => (
           <div key={ciudad.id}>
-            <Card name={ciudad.name} min={ciudad.main.temp_min} max={ciudad.main.temp_max} id={ciudad.id} />
+            <Card name={ciudad.name} min={ciudad.main.temp_min} max={ciudad.main.temp_max} id={ciudad.id} lon={ciudad.coord.lon} lat={ciudad.coord.lat} />
           </div>
         ))
       }
+
     </div>
   )
 }
