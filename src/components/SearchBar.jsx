@@ -15,11 +15,12 @@ function SearchBar() {
 
   function onClick() {
     dispatch(getCities(input))
+    setInput("")
   }
 
   return (
     <div className='contenedor-search'>
-      <input className='input-search' type="text" onChange={onChange} />
+      <input className='input-search' type="text" onChange={onChange} value={input} />
       <button className='btn-search' onClick={onClick}>Search</button>
     </div>
   )
