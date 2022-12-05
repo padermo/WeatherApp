@@ -1,7 +1,7 @@
 .contenedor-cards{
-  display: grid;
+  display: flex;
   justify-content: center;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex-wrap: wrap;
   padding: 20px;
 }
