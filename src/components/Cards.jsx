@@ -15,7 +15,6 @@ function Cards() {
           </div>
         ))
       }
-
     </div>
   )
 }
